@@ -24,7 +24,7 @@ public class ApplicationInitializar {
 			aux.sair();
 		}
 		
-		String nc = JOptionPane.showInputDialog("Digite a nota de corte"); 
+		String nc = JOptionPane.showInputDialog("Digite a média"); 
 		double notaCorte = Double.parseDouble(nc);
 		
 

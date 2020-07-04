@@ -16,10 +16,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class DemoJFileChooser {
+//	public String texto;
+//	
+//	public String getTexto() {
+//		return texto;
+//	}
+//
+//	public void setTexto(String texto) {
+//		this.texto = texto;
+//	}
 
-	public static void main(String[] args) {
-		new DemoJFileChooser().createWindow("cdasnfjadsjnd");
-	}
+//	public static void main(String[] args) {
+//		DemoJFileChooser d = new DemoJFileChooser();
+//		d.createWindow(d.texto);
+//	}
 
 	public void createWindow(String texto) {
 		JFrame frame = new JFrame("Swing Tester");
@@ -35,7 +45,7 @@ public class DemoJFileChooser {
 		LayoutManager layout = new FlowLayout();
 		panel.setLayout(layout);
 
-		JButton button = new JButton("Click Me!");
+		JButton button = new JButton("Buscar diretório");
 		final JLabel label = new JLabel();
 
 		button.addActionListener(new ActionListener() {

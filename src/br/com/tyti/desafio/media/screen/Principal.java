@@ -146,7 +146,7 @@ public class Principal {
 		JOptionPane.showMessageDialog(null, texto);
 
 		String options[] = {"Salvar", "Não Salvar"};
-		int save = JOptionPane.showOptionDialog(null, "Deseja salvar lista em alunos . txt?", "Salvar", JOptionPane.YES_NO_OPTION, 
+		int save = JOptionPane.showOptionDialog(null, "Deseja salvar lista em alunos.txt?", "Salvar", JOptionPane.YES_NO_OPTION, 
 				JOptionPane.INFORMATION_MESSAGE, null, options, null);
 		
 		if(save == JOptionPane.YES_OPTION) {	
