@@ -1,6 +1,7 @@
 package br.com.tyti.desafio.media.screen;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -12,35 +13,23 @@ public class Principal {
 
 	// Atributos Principal
 	public int conf;
-	public ArrayList<Aluno> alunos = new ArrayList<Aluno>();
-	public ArrayList<Double> notas = new ArrayList<Double>();
-	public ArrayList<Integer> pesos = new ArrayList<Integer>();
-
-	// Cadastra notas de alunos
-
-	public void clear() {
-		if (!notas.isEmpty()) {
-			notas.clear();
-		}
-		if (!pesos.isEmpty()) {
-			pesos.clear();
-		}
-	}
+	//Use a spec e evite a implem
+	public List<Aluno> alunos = new ArrayList<Aluno>();
 	
 	public void sair() {
 		JOptionPane.showMessageDialog(null, "Saindo");
 		System.exit(0);
 	}
 
-	public void inputNome(Aluno a) {
-		String nome = JOptionPane.showInputDialog(null, "Digite o nome do aluno");
+	public String getInputNome() {
+		String nome = JOptionPane.showInputDialog(null, "Digite o nome");
 
 		if (nome.equals("")) {
 			JOptionPane.showMessageDialog(null, "Saindo!");
 			show();
 			System.exit(0);
 		}
-		a.setNome(nome);
+		return nome;
 	}
 
 	public void inputNota(Aluno a, int i) {
@@ -65,9 +54,9 @@ public class Principal {
 			}
 
 			try {
-				a.getPesos().add(Integer.parseInt(peso));
+				a.getNotas().add(Double.parseDouble(peso));
 			} catch (NumberFormatException e) {
-				a.getPesos().add(erroInt(e, i));
+				a.getNotas().add(erroDouble(e, i));
 			}
 		}
 	}
@@ -88,14 +77,13 @@ public class Principal {
 		return conf == JOptionPane.YES_OPTION;
 	}
 
-	public void cadastrarAluno(int mod) {
+	public void cadastrarAluno(int mod, double corte) {
 		do {
-			clear();
+			//clear();
 
-			Aluno a = new Aluno();
-			inputNome(a);
-
-			for (int i = 1; i > 0; i++) {
+			Aluno a = new Aluno(getInputNome());
+	
+			for (int i = 1; ; i++) {
 
 				inputNota(a, i);
 				inputPeso(a, i, mod);
@@ -105,7 +93,7 @@ public class Principal {
 				}
 			}
 
-			calcularMedia(mod, a);
+			calcularMedia(mod, a, corte);
 			alunos.add(a);
 
 		} while (outroAluno());
@@ -139,8 +127,8 @@ public class Principal {
 	}
 
 	// Calcula a media
-	public void calcularMedia(int mod, Aluno a) {
-		Media media = new Media();
+	public void calcularMedia(int mod, Aluno a, double corte) {
+		Media media = new Media(corte);
 		if (mod == JOptionPane.YES_OPTION) {
 			media.aritmetica(a.getNotas(), a);
 		} else {

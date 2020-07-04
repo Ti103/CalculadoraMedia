@@ -7,11 +7,13 @@ public class Aluno {
 	//Atributos
 	private String nome;
 	private ArrayList<Double> notas = new ArrayList<Double>();
-	private ArrayList<Integer> pesos = new ArrayList<Integer>();
+	private ArrayList<Double> pesos = new ArrayList<Double>();
 	private double media;
 	private String situacao;
 	
-	
+	public Aluno(String nome) {
+		this.nome = nome;
+	}
 
 	//Getters e Setter
 	public void setNome(String nome) {
@@ -30,11 +32,11 @@ public class Aluno {
 		this.notas = notas;
 	}
 
-	public ArrayList<Integer> getPesos() {
+	public ArrayList<Double> getPesos() {
 		return pesos;
 	}
 
-	public void setPesos(ArrayList<Integer> pesos) {
+	public void setPesos(ArrayList<Double> pesos) {
 		this.pesos = pesos;
 	}
 	
@@ -57,8 +59,8 @@ public class Aluno {
 		}
 	}
 	
-	public void situacao() {
-		if(media>=6) {
+	public void situacao(double corte) {
+		if(media>=corte) {
 			setSituacao("Aprovado :)");
 		}else {
 			setSituacao("Reprovado :(");

@@ -23,8 +23,12 @@ public class ApplicationInitializar {
 		if (mod == JOptionPane.CANCEL_OPTION) {
 			aux.sair();
 		}
+		
+		String nc = JOptionPane.showInputDialog("Digite a nota de corte"); 
+		double notaCorte = Double.parseDouble(nc);
+		
 
-		aux.cadastrarAluno(mod);
+		aux.cadastrarAluno(mod, notaCorte);
 		aux.show();
 	}
 }
