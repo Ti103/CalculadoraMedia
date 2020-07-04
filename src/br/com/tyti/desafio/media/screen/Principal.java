@@ -1,4 +1,4 @@
-package br.com.tyti.desafio.media.screen.terms;
+package br.com.tyti.desafio.media.screen;
 
 import java.util.ArrayList;
 
@@ -32,7 +32,7 @@ public class Principal {
 		System.exit(0);
 	}
 
-	private void inputNome(Aluno a) {
+	public void inputNome(Aluno a) {
 		String nome = JOptionPane.showInputDialog(null, "Digite o nome do aluno");
 
 		if (nome.equals("")) {
@@ -170,26 +170,5 @@ public class Principal {
 		}else {
 			
 		}
-	}
-
-	public static void main(String[] args) {
-		Principal aux = new Principal();
-		Termos t = new Termos();
-		
-		if (!t.termos()) {
-			aux.sair();
-		}
-
-		String modOp[] = { "Média Aritmética", "Média Ponderada", "Sair" };
-
-		int mod = JOptionPane.showOptionDialog(null, "Como você deseja calcular a média?", "modelo",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, modOp, null);
-
-		if (mod == JOptionPane.CANCEL_OPTION) {
-			aux.sair();
-		}
-
-		aux.cadastrarAluno(mod);
-		aux.show();
 	}
 }

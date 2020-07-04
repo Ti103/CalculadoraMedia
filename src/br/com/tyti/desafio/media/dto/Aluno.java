@@ -59,9 +59,9 @@ public class Aluno {
 	
 	public void situacao() {
 		if(media>=6) {
-			setSituacao("Aprovado");
+			setSituacao("Aprovado :)");
 		}else {
-			setSituacao("Reprovado");
+			setSituacao("Reprovado :(");
 		}
 	}
 	
