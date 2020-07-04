@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class DemoJFileChooser {
@@ -56,7 +57,7 @@ public class DemoJFileChooser {
 				int option = fileChooser.showOpenDialog(frame);
 				if (option == JFileChooser.APPROVE_OPTION) {
 					File file = fileChooser.getSelectedFile();
-					File file2 = new File(file.getAbsolutePath() + "/texto.txt");
+					File file2 = new File(file.getAbsolutePath() + "/alunos.txt");
 					FileWriter arq;
 					try {
 						arq = new FileWriter(file2);
@@ -66,7 +67,9 @@ public class DemoJFileChooser {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-					label.setText("Folder Selected: " + file.getName());
+//					label.setText("Folder Selected: " + file.getName());
+					JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+					System.exit(0);
 				} else {
 					label.setText("Open command canceled");
 				}

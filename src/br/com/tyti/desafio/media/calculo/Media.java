@@ -26,7 +26,7 @@ public class Media {
 	}
 
 	// Calcula media ponderada
-	public void ponderada(ArrayList<Double> notas, ArrayList<Double> pesos, Aluno a) {
+	public void ponderada(ArrayList<Double> notas, ArrayList<Integer> pesos, Aluno a) {
 		for(int i = 0; i < notas.size(); i++) {
 			media += notas.get(i) * pesos.get(i);
 		}

@@ -7,7 +7,7 @@ public class Aluno {
 	//Atributos
 	private String nome;
 	private ArrayList<Double> notas = new ArrayList<Double>();
-	private ArrayList<Double> pesos = new ArrayList<Double>();
+	private ArrayList<Integer> pesos = new ArrayList<Integer>();
 	private double media;
 	private String situacao;
 	
@@ -32,11 +32,11 @@ public class Aluno {
 		this.notas = notas;
 	}
 
-	public ArrayList<Double> getPesos() {
+	public ArrayList<Integer> getPesos() {
 		return pesos;
 	}
 
-	public void setPesos(ArrayList<Double> pesos) {
+	public void setPesos(ArrayList<Integer> pesos) {
 		this.pesos = pesos;
 	}
 	

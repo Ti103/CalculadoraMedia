@@ -54,9 +54,9 @@ public class Principal {
 			}
 
 			try {
-				a.getNotas().add(Double.parseDouble(peso));
+				a.getPesos().add(Integer.parseInt(peso));
 			} catch (NumberFormatException e) {
-				a.getNotas().add(erroDouble(e, i));
+				a.getPesos().add(erroInt(e, i));
 			}
 		}
 	}
@@ -151,9 +151,9 @@ public class Principal {
 		
 		if(save == JOptionPane.YES_OPTION) {	
 			if (Arquivo.write(texto)) {
-				JOptionPane.showMessageDialog(null, "Lista de alunos salva com sucesso em alunos.txt");
+				//JOptionPane.showMessageDialog(null, "Lista de alunos salva com sucesso em alunos.txt");
 			} else {
-				JOptionPane.showMessageDialog(null, "Erro, otário");
+				//JOptionPane.showMessageDialog(null, "Erro, otário");
 			}
 		}else {
 			
