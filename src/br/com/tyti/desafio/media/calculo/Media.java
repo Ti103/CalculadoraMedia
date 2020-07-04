@@ -1,6 +1,8 @@
-package br.com.tyti.desafio.media;
+package br.com.tyti.desafio.media.calculo;
 
 import java.util.ArrayList;
+
+import br.com.tyti.desafio.media.dto.Aluno;
 
 public class Media {
 	double media = 0;

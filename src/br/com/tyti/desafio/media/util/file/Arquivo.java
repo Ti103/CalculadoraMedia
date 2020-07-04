@@ -1,4 +1,4 @@
-package br.com.tyti.desafio.media;
+package br.com.tyti.desafio.media.util.file;
 
 import java.io.FileWriter;
 import java.io.IOException;

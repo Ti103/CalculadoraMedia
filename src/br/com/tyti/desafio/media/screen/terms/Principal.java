@@ -1,8 +1,12 @@
-package br.com.tyti.desafio.media;
+package br.com.tyti.desafio.media.screen.terms;
 
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
+
+import br.com.tyti.desafio.media.calculo.Media;
+import br.com.tyti.desafio.media.dto.Aluno;
+import br.com.tyti.desafio.media.util.file.Arquivo;
 
 public class Principal {
 

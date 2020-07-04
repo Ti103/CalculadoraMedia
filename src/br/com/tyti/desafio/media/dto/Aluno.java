@@ -1,8 +1,9 @@
-package br.com.tyti.desafio.media;
+package br.com.tyti.desafio.media.dto;
 
 import java.util.ArrayList;
 
 public class Aluno {
+	
 	//Atributos
 	private String nome;
 	private ArrayList<Double> notas = new ArrayList<Double>();

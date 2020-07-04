@@ -1,4 +1,4 @@
-package br.com.tyti.desafio.media;
+package br.com.tyti.desafio.media.screen.terms;
 
 import javax.swing.JOptionPane;
 
